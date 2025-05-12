@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Feature;
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Package;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -42,19 +42,19 @@ class DatabaseSeeder extends Seeder
         Package::create([
             'name' => 'Basic',
             'price' => 5,
-            'credits' => 20
+            'credits' => 20,
         ]);
 
         Package::create([
             'name' => 'Silver',
             'price' => 20,
-            'credits' => 100
+            'credits' => 100,
         ]);
 
         Package::create([
             'name' => 'gold',
             'price' => 50,
-            'credits' => 500
+            'credits' => 500,
         ]);
     }
 }

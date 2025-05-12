@@ -26,7 +26,7 @@ export default function Authenticated({ user, header, children }) {
                                     href={route("dashboard")}
                                     active={route().current("dashboard")}
                                 >
-                                    Dashboard
+                                    Dashboards
                                 </NavLink>
                             </div>
                             <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
@@ -52,9 +52,11 @@ export default function Authenticated({ user, header, children }) {
                                 <img src="/coin.png" className="w-[40px]" />
                                 {user.available_credits} Credits
                             </span>
-                            <Link href={route('credit.index')}
-                            className="text-white py-1 px-2 rounded border transition-colors hover:text-gray-800 hover:bg-white">
-                            Get more
+                            <Link
+                                href={route("credit.index")}
+                                className="text-white py-1 px-2 rounded border transition-colors hover:text-gray-800 hover:bg-white"
+                            >
+                                Get more
                             </Link>
                             <div className="ms-3 relative">
                                 <Dropdown>
@@ -155,6 +157,24 @@ export default function Authenticated({ user, header, children }) {
                             active={route().current("dashboard")}
                         >
                             Dashboard
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink
+                            href={route("feature1.index")}
+                            active={route().current("feature1.index")}
+                        >
+                            Feature 1
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink
+                            href={route("feature2.index")}
+                            active={route().current("feature2.index")}
+                        >
+                            Feature 2
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink
+                            href={route("credit.index")}
+                            active={route().current("credit.index")}
+                        >
+                            Get more credits
                         </ResponsiveNavLink>
                     </div>
 

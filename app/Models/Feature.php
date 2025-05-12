@@ -15,6 +15,6 @@ class Feature extends Model
         'name',
         'description',
         'required_credits',
-        'active'
+        'active',
     ];
 }

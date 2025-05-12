@@ -1,14 +1,12 @@
 <?php
 
-use Inertia\Inertia;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Foundation\Application;
 use App\Http\Controllers\CreditController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Feature1controller;
 use App\Http\Controllers\Feature2controller;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 

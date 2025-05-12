@@ -13,7 +13,7 @@ class UsedFeature extends Model
         'feature_id',
         'user_id',
         'credits',
-        'data'
+        'data',
     ];
 
     protected function casts(): array

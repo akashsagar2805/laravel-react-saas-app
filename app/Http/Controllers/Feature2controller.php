@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Feature;
-use Illuminate\Http\Request;
 use App\Http\Resources\FeatureResource;
+use App\Models\Feature;
 use App\Models\UsedFeature;
+use Illuminate\Http\Request;
 
 class feature2controller extends Controller
 {
@@ -14,15 +14,15 @@ class feature2controller extends Controller
     public function __construct()
     {
         $this->feature = Feature::where('route_name', 'feature2.index')
-                                ->where('active', true)
-                                ->firstOrFail();
+            ->where('active', true)
+            ->firstOrFail();
     }
 
     public function index()
     {
         return inertia('Feature2/Index', [
             'feature' => new FeatureResource($this->feature),
-            'answer' => session('answer')
+            'answer' => session('answer'),
         ]);
     }
 
@@ -48,7 +48,7 @@ class feature2controller extends Controller
             'feature_id' => $this->feature->id,
             'user_id' => $user->id,
             'credits' => $this->feature->required_credits,
-            'data' => $data
+            'data' => $data,
         ]);
 
         return to_route('feature2.index')->with('answer', $number1 - $number2);
